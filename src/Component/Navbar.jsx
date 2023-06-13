@@ -13,8 +13,8 @@ import { Link } from "react-router-dom";
 function Navbarim() {
 
   const imgStyle = {
-    width: '30px', // Örneğin, genişlik 100 piksel olsun
-    height: 'auto', // Yükseklik otomatik olarak ayarlanacak
+    width: '30px', 
+    height: 'auto' 
     
   };
 
