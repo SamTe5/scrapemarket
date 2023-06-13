@@ -7,8 +7,8 @@ import Container from 'react-bootstrap/Container';
 function Home() {
   
   return (
-    <Container fluid>
-      <div className='bgHome'>Home</div>
+    <Container fluid className='p-0'>
+      <div  className='bgHome'>Home</div>
     </Container>
     
   )

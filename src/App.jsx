@@ -8,7 +8,7 @@ import Vegetable from './Pages/VegetablePage/Vegetable';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App vh-100">
       <Navbarim/>      
       
       <Routes>
