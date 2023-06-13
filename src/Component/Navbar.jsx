@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 function Navbarim() {
 
   const imgStyle = {
@@ -16,6 +17,12 @@ function Navbarim() {
     height: 'auto', // Yükseklik otomatik olarak ayarlanacak
     
   };
+
+  const linkText={
+    textDecoration:"none",
+    color:"black"
+  }
+
   return (
     <Navbar expand="lg">
       <Container>
@@ -29,14 +36,14 @@ function Navbarim() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link className='active'>
-              <Link to="/">Home</Link>
+            <Nav.Link className='active' >
+              <Link to="/" style={linkText}>Home</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/Fruits">Fruits</Link>
+              <Link to="/Fruits" style={linkText}>Fruits</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/Vegetable">Vegetable</Link>
+              <Link to="/Vegetable" style={linkText}>Vegetable</Link>
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
