@@ -234,12 +234,10 @@ const puppeteer = require('puppeteer');
 
   //DÖNÜŞÜM
 
-
   let newFruits = {}
 
-
-
-
+  const fruits = ["avokado", "karpuz", "muz", "kivi", "armut santa", "armut deveci", "ananas", "elma golden", "elma gran", "elma misket", "elma stark", "portakal", "seftali", "kavun", "yeni dunya", "cilek", "erik"]
+  
   for (let i = 0; i < fruits.length; i++) {
     newFruits[fruits[i]] = {
       erenler: [],
@@ -248,10 +246,8 @@ const puppeteer = require('puppeteer');
       sok: [],
       a101: [],
       carreforsa: []
-
     }
-
-
+  
     let markets = {
       erenler: birlesikVeriMeyve.erenler,
       niktas: birlesikVeriMeyve.niktas,
@@ -260,20 +256,23 @@ const puppeteer = require('puppeteer');
       sok: birlesikVeriMeyve.sok,
       a101: birlesikVeriMeyve.a101
     }
-    const fruits = ["avokado", "karpuz", "muz", "kivi", "armut santa", "armut deveci", "ananas", "elma golden", "elma gran", "elma misket", "elma stark", "portakal", "seftali", "kavun", "yeni dunya", "cilek", "erik"]
+  
     for (const marketAdi in markets) {
-
       const element = markets[marketAdi];
+  
       for (const marketFruit of element) {
-        if (marketFruit.Name.includes(fruits)) {
-          
+        if (marketFruit.Name.includes(fruits[i])) {
+          newFruits[fruits[i]][marketAdi].push({
+            Name: marketFruit.Name,
+            Price: marketFruit.Price
+          });
         }
       }
-
     }
   }
-  //SEBZE
-
+  
+  console.log(newFruits);
+  
 
 
 
