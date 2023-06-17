@@ -7,6 +7,7 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
 
 
+  
   //Erenler Meyve
 
 
@@ -18,7 +19,7 @@ const puppeteer = require('puppeteer');
   const data = await page.evaluate(() => {
     const events = document.querySelectorAll('.product-layout');
     const prices = [];
-    const fruits = ["avokado", "karpuz", "muz", "kivi", "armut santa", "armut deveci", "ananas", "elma golden", "elma gran", "elma misket", "elma stark", "portakal", "şeftali", "kavun", "yeni d", "lek", "erik"]
+    const fruits = ["avokado", "karpuz", "muz", "kivi", "armut santa", "armut deveci", "ananas", "elma golden", "elma gran", "elma misket", "elma stark", "portakal", "seftali", "kavun", "yeni dunya", "cilek", "erik"]
 
     for (let x = 0; x < fruits.length; x++) {
 
