@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 
 
-(async () => {
+async function veriCek(){
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
 
@@ -275,13 +275,13 @@ const puppeteer = require('puppeteer');
   
 
 
-
-
-
-
   await browser.close();
 
-})();
+  return newFruits
+
+};
+
+module.exports = veriCek
 
 
 
