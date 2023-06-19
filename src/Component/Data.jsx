@@ -22,15 +22,12 @@ function MyComponent() {
     }
   };
 
+
+
+  
   return (
     <div>
       
-      {Object.entries(data).map(([fruit, markets]) => (
-        <div key={fruit}>
-          <h2>{fruit}</h2>
-          
-        </div>
-      ))}
     </div>
   );
 }
