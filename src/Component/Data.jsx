@@ -24,7 +24,7 @@ function MyComponent() {
 
   return (
     <div>
-      {/* Veriyi kullanarak bileşenin render işlemlerini gerçekleştirin */}
+      
       {Object.entries(data).map(([fruit, markets]) => (
         <div key={fruit}>
           <h2>{fruit}</h2>
