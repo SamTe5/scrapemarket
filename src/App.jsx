@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App vh-100">
       <Navbarim/>
-         
+       
       
       <Routes>
         <Route path='/Fruits' element={<Fruits/>}/>

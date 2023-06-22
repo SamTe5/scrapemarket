@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
-function FruitsCard() {
+function FruitsCard({productValue}) {
   return (
-    <div>FruitsCard</div>
+    <div>
+        <h2>{productValue.Name}</h2>
+    </div>
   )
 }
 

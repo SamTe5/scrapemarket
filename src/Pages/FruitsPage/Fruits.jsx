@@ -19,7 +19,8 @@ function Fruits() {
         },
       });
       const jsonData = await response.json();
-      setData(jsonData);
+      const wrappedJsonData = [jsonData];
+      setData(wrappedJsonData);
     } catch (error) {
       console.error('Veri çekme hatası:', error);
     }
@@ -34,9 +35,10 @@ function Fruits() {
             data.length>0 ? (
               data.map(value=>{
                 return <Col>
-                  <FruitsCard>
-                    
-                  </FruitsCard>
+                  <FruitsCard
+                  productValue={value.avokado}
+                  />                    
+                  
                 </Col>
               })
             ) : (<h2>LOADİNG</h2>)
