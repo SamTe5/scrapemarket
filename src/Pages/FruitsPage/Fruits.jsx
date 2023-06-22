@@ -26,6 +26,8 @@ function Fruits() {
     }
   };
 
+  console.log(data)
+
 
   return (
     <div>
@@ -33,10 +35,12 @@ function Fruits() {
         <Row>
           {
             data.length>0 ? (
-              data.map(value=>{
+              Object.keys(data[0]).map(value=>{
+                
+                
                 return <Col>
                   <FruitsCard
-                  productValue={value.avokado}
+                  productValue={value}
                   />                    
                   
                 </Col>
