@@ -13,7 +13,7 @@ function FruitsCard({productValue}) {
   console.log(productValue)
   return (
     <div>
-        <h2>{productValue}</h2>
+        <h2>{productValue.toUpperCase()}</h2>
         <Row>
           <Col>
             <Erenler></Erenler>

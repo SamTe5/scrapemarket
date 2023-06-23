@@ -2,7 +2,11 @@ import React from 'react'
 
 function Niktas() {
   return (
-    <div>Niktas</div>
+    <div>
+      <div className='detailLogo'>
+            <img src="images/n.png" alt="" />
+        </div>
+    </div>
   )
 }
 

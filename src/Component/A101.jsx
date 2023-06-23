@@ -2,7 +2,11 @@ import React from 'react'
 
 function A101() {
   return (
-    <div>A101</div>
+    <div>
+      <div className='detailLogo'>
+            <img src="images/a.png" alt="" />
+        </div>
+    </div>
   )
 }
 

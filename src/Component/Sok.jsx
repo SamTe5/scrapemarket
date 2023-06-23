@@ -2,7 +2,11 @@ import React from 'react'
 
 function Sok() {
   return (
-    <div>Sok</div>
+    <div>
+      <div className='detailLogo'>
+            <img src="images/s.png" alt="" />
+        </div>
+    </div>
   )
 }
 

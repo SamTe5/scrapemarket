@@ -32,13 +32,13 @@ function Fruits() {
   return (
     <div>
       <Container>
-        <Row>
+        <Row className='justify-content-between'>
           {
             data.length>0 ? (
               Object.keys(data[0]).map(value=>{
                 
                 
-                return <Col>
+                return <Col sm={5} className='text-center'>
                   <FruitsCard
                   productValue={value}
                   />                    

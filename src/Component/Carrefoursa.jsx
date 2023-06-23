@@ -2,7 +2,11 @@ import React from 'react'
 
 function Carrefoursa() {
   return (
-    <div>Carrefoursa</div>
+    <div>
+      <div className='detailLogo'>
+            <img src="images/c.png" alt="" />
+        </div>
+    </div>
   )
 }
 

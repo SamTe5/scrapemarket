@@ -5,4 +5,10 @@
 
 }
 
+img{
+    max-width: 100%;
+}
 
+.detailLogo{
+    width: 50%;
+}

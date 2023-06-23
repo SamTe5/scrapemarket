@@ -2,7 +2,11 @@ import React from 'react'
 
 function Migros() {
   return (
-    <div>Migros</div>
+    <div>
+      <div className='detailLogo'>
+            <img src="images/m.png" alt="" />
+        </div>
+    </div>
   )
 }
 
