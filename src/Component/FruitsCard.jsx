@@ -9,8 +9,9 @@ import A101 from './A101'
 import Sok from './Sok';
 
 
-function FruitsCard({productValue}) {
+function FruitsCard({productValue,datam}) {
   console.log(productValue)
+  console.log(datam)
   return (
     <div>
         <h2>{productValue.toUpperCase()}</h2>

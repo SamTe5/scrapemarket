@@ -41,6 +41,7 @@ function Fruits() {
                 return <Col sm={5} className='text-center'>
                   <FruitsCard
                   productValue={value}
+                  datam={data}
                   />                    
                   
                 </Col>
