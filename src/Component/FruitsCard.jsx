@@ -14,13 +14,18 @@ function FruitsCard({ productValue, datam }) {
   return (
     <div>
       <h2>{productValue.toUpperCase()}</h2>
-      <Row>
-        <Col>
-          <Erenler>
+      <Row >
+        <Col className='d-flex'>
+          {
+            datam[0][productValue].erenler.map(element => {
 
-          </Erenler>
-        </Col>
-        <Col>
+              return <Erenler
+                name={element.Name}
+                price={element.Price}
+              />
+            })
+          }
+
 
           {
             datam[0][productValue].niktas.map(element => {
@@ -33,8 +38,6 @@ function FruitsCard({ productValue, datam }) {
           }
 
 
-        </Col>
-        <Col>
 
           {
             datam[0][productValue].a101.map(element => {
@@ -46,8 +49,7 @@ function FruitsCard({ productValue, datam }) {
             })
           }
 
-        </Col>
-        <Col>
+
           {
             datam[0][productValue].sok.map(element => {
 
@@ -57,9 +59,8 @@ function FruitsCard({ productValue, datam }) {
               />
             })
           }
-        </Col>
-        <Col>
-        {
+
+          {
             datam[0][productValue].migros.map(element => {
 
               return <Migros
@@ -68,9 +69,8 @@ function FruitsCard({ productValue, datam }) {
               />
             })
           }
-        </Col>
-        <Col>
-          
+
+
           {
             datam[0][productValue].carreforsa.map(element => {
 
@@ -80,7 +80,7 @@ function FruitsCard({ productValue, datam }) {
               />
             })
           }
-          
+
         </Col>
       </Row>
     </div>
