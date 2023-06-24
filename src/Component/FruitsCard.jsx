@@ -19,7 +19,9 @@ function FruitsCard({productValue}) {
             <Erenler></Erenler>
           </Col>
           <Col>
-            <Niktas></Niktas>
+            <Niktas>
+              
+            </Niktas>
           </Col>
           <Col>
             <A101></A101>
