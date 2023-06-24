@@ -9,34 +9,46 @@ import A101 from './A101'
 import Sok from './Sok';
 
 
-function FruitsCard({productValue,datam}) {
-  console.log(productValue)
-  console.log(datam)
+function FruitsCard({ productValue, datam }) {
+
   return (
     <div>
-        <h2>{productValue.toUpperCase()}</h2>
-        <Row>
-          <Col>
-            <Erenler></Erenler>
-          </Col>
-          <Col>
-            <Niktas>
-              
-            </Niktas>
-          </Col>
-          <Col>
-            <A101></A101>
-          </Col>
-          <Col>
-            <Sok></Sok>
-          </Col>
-          <Col>
-            <Migros></Migros>
-          </Col>
-          <Col>
-            <Carrefoursa></Carrefoursa>
-          </Col>
-        </Row>
+      <h2>{productValue.toUpperCase()}</h2>
+      <Row>
+        <Col>
+          <Erenler>
+
+          </Erenler>
+        </Col>
+        <Col>
+          
+            {
+              datam[0][productValue].niktas.map(element => {
+                
+                return <Niktas
+                name={element.Name}
+                price={element.Price}
+                />
+                  
+                
+              })
+            }
+
+          
+        </Col>
+        <Col>
+          <A101></A101>
+        </Col>
+        <Col>
+          <Sok></Sok>
+        </Col>
+        <Col>
+          <Migros></Migros>
+        </Col>
+        <Col>
+          <Carrefoursa></Carrefoursa>
+        </Col>
+      </Row>
     </div>
   )
 }
