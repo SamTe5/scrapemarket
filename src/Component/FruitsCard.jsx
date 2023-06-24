@@ -37,7 +37,19 @@ function FruitsCard({ productValue, datam }) {
           
         </Col>
         <Col>
-          <A101></A101>
+          
+          {
+              datam[0][productValue].a101.map(element => {
+                
+                return <A101
+                name={element.Name}
+                price={element.Price}
+                />
+                  
+                
+              })
+            }
+          
         </Col>
         <Col>
           <Sok></Sok>
