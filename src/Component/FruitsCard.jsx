@@ -13,7 +13,7 @@ function FruitsCard({ productValue, datam }) {
   return (
     <div>
       <h2>{productValue.toUpperCase()}</h2>
-      <Row className='justify-content-center'>
+      <Row className='justify-content-center text-center'>
 
 
         {
