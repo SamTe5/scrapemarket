@@ -38,7 +38,7 @@ function Fruits() {
               Object.keys(data[0]).map(value=>{
                 console.log(data[0][value].niktas)
                 
-                return <Col sm={5} className='text-center'>
+                return <Col sm={5} className='text-center fruitsRow my-4'>
                   <FruitsCard
                   productValue={value}
                   datam={data}

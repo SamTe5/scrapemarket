@@ -11,11 +11,9 @@ import Sok from './Sok';
 function FruitsCard({ productValue, datam }) {
 
   return (
-    <div>
+    <div className='mt-3'>
       <h2>{productValue.toUpperCase()}</h2>
-      <Row className='justify-content-center text-center'>
-
-
+      <Row className='justify-content-center text-center py-3'>
         {
           datam[0][productValue].erenler.map(element => {
 
@@ -27,8 +25,6 @@ function FruitsCard({ productValue, datam }) {
           })
         }
 
-
-
         {
           datam[0][productValue].niktas.map(element => {
 
@@ -39,10 +35,6 @@ function FruitsCard({ productValue, datam }) {
           })
         }
 
-
-
-
-
         {
           datam[0][productValue].a101.map(element => {
 
@@ -52,7 +44,6 @@ function FruitsCard({ productValue, datam }) {
             />
           })
         }
-
 
         {
           datam[0][productValue].sok.map(element => {
@@ -74,7 +65,6 @@ function FruitsCard({ productValue, datam }) {
           })
         }
 
-
         {
           datam[0][productValue].carreforsa.map(element => {
 
@@ -84,7 +74,6 @@ function FruitsCard({ productValue, datam }) {
             />
           })
         }
-
 
       </Row>
     </div>

@@ -15,5 +15,9 @@ img{
 }
 
 .detailLogo img{
-    width: 50%;
+    width: 30%;
+}
+
+.fruitsRow{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
