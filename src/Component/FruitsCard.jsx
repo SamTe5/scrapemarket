@@ -21,44 +21,66 @@ function FruitsCard({ productValue, datam }) {
           </Erenler>
         </Col>
         <Col>
-          
-            {
-              datam[0][productValue].niktas.map(element => {
-                
-                return <Niktas
+
+          {
+            datam[0][productValue].niktas.map(element => {
+
+              return <Niktas
                 name={element.Name}
                 price={element.Price}
-                />
-                  
-                
-              })
-            }
+              />
+            })
+          }
 
-          
+
+        </Col>
+        <Col>
+
+          {
+            datam[0][productValue].a101.map(element => {
+
+              return <A101
+                name={element.Name}
+                price={element.Price}
+              />
+            })
+          }
+
+        </Col>
+        <Col>
+          {
+            datam[0][productValue].sok.map(element => {
+
+              return <Sok
+                name={element.Name}
+                price={element.Price}
+              />
+            })
+          }
+        </Col>
+        <Col>
+        {
+            datam[0][productValue].migros.map(element => {
+
+              return <Migros
+                name={element.Name}
+                price={element.Price}
+              />
+            })
+          }
         </Col>
         <Col>
           
           {
-              datam[0][productValue].a101.map(element => {
-                
-                return <A101
+            datam[0][productValue].carreforsa.map(element => {
+
+              return <Carrefoursa
                 name={element.Name}
                 price={element.Price}
-                />
-                  
-                
-              })
-            }
+              />
+            })
+          }
           
-        </Col>
-        <Col>
-          <Sok></Sok>
-        </Col>
-        <Col>
-          <Migros></Migros>
-        </Col>
-        <Col>
-          <Carrefoursa></Carrefoursa>
         </Col>
       </Row>
     </div>
