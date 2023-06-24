@@ -32,7 +32,7 @@ function Fruits() {
   return (
     <div>
       <Container>
-        <Row className='justify-content-between'>
+        <Row className='justify-content-between px-5'>
           {
             data.length>0 ? (
               Object.keys(data[0]).map(value=>{
