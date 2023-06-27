@@ -26,7 +26,9 @@ function Fruits() {
     }
   };
 
-  console.log(data)
+  
+
+  console.log(data[0])
 
 
   return (
@@ -35,13 +37,13 @@ function Fruits() {
         <Row className='justify-content-between px-5'>
           {
             data.length>0 ? (
-              Object.keys(data[0]).map(value=>{
-                console.log(data[0][value].niktas)
+              Object.keys(data[0][0]).map(value=>{
+                console.log(value)
                 
                 return <Col sm={5} className='text-center fruitsRow my-4'>
                   <FruitsCard
                   productValue={value}
-                  datam={data}
+                  datam={data[0]}
                   />                    
                   
                 </Col>
