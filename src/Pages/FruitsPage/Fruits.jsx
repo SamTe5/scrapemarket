@@ -28,7 +28,7 @@ function Fruits() {
 
   
 
-  console.log(data[0])
+  console.log(data)
 
 
   return (
@@ -38,6 +38,7 @@ function Fruits() {
           {
             data.length>0 ? (
               Object.keys(data[0][0]).map(value=>{
+
                 console.log(value)
                 
                 return <Col sm={5} className='text-center fruitsRow my-4'>
