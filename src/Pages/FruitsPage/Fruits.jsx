@@ -39,13 +39,17 @@ function Fruits() {
           <Col sm={2}>
             <Row>
               {
-                Object.keys(data[0][0]).map(value=>{
-                  return <Col>
-                    <LeftItem>
-                      
-                    </LeftItem>
-                  </Col>
-                })
+                data.length > 0 ? (
+                  Object.keys(data[0][0]).map(value=>{
+                    return <Col>
+                      <LeftItem
+                        itemName={value}
+                      />                      
+                     
+                    </Col>
+                  })
+                ) : (<h2>Loading</h2>)
+                
               }
             </Row>
           </Col>
