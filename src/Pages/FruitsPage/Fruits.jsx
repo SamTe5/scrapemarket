@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col,Button } from 'react-bootstrap'
+import { Container, Row, Col,Button} from 'react-bootstrap'
 import FruitsCard from '../../Component/FruitsCard';
 import LeftItem from '../../Component/LeftItem';
 
 function Fruits() {
 
   const [data, setData] = useState([]);
+  const [selectedItem, setSelectedItem] = useState('');
 
   useEffect(() => {
     fetchData();
@@ -27,9 +28,11 @@ function Fruits() {
     }
   };
 
+  const gelenItem = (itemName) => {
+    setSelectedItem(itemName);
+  };
 
-
-  console.log(data)
+ console.log(selectedItem)  
 
 
   return (
@@ -47,6 +50,7 @@ function Fruits() {
                     return <Col sm={12} className='mt-1'>
                       <LeftItem
                         itemName={value}
+                        onItemClick={gelenItem}
                       />                      
                      
                     </Col>

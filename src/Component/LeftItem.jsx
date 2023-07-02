@@ -4,14 +4,20 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 
 
-function LeftItem({ itemName }) {
+function LeftItem({ itemName,onItemClick}) {
+   
+
+    const itemFilter=() =>{
+        
+        onItemClick(itemName)
+    }
     return (
 
 
         <ListGroup>
-            <ListGroup.Item action href="#link1">
+            <ListGroupItem action onClick={itemFilter}>
                 {itemName.toUpperCase()}
-            </ListGroup.Item>
+            </ListGroupItem>
 
         </ListGroup>
 
