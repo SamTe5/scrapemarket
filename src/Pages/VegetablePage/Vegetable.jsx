@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
 import VegetableCards from '../../Component/VegetableCards';
-
+import LeftItem from '../../Component/LeftItem';
 
 
 function Vegetable() {
@@ -36,7 +36,26 @@ function Vegetable() {
   return (
     <div>
       <Container>
-        <Row className='justify-content-between px-5'>
+        <Row>
+          <Col sm={2}>
+          <Row>
+              {
+                data.length > 0 ? (
+                  Object.keys(data[0][1]).map(value=>{
+                    return <Col sm={12} className='mt-1'>
+                      <LeftItem
+                        itemName={value}
+                      />                      
+                     
+                    </Col>
+                  })
+                ) : (<h2>Loading</h2>)
+                
+              }
+            </Row>
+          </Col>
+          <Col sm={10}>
+          <Row className='justify-content-between px-5'>
           {
             data.length>0 ? (
               Object.keys(data[0][1]).map(value=>{
@@ -54,6 +73,9 @@ function Vegetable() {
             ) : (<h2>LOADİNG</h2>)
           }
         </Row>
+          </Col>
+        </Row>
+        
       </Container>
     </div>
   )
