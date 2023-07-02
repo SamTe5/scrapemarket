@@ -6,7 +6,9 @@ import Row from 'react-bootstrap/Row';
 
 function LeftItem() {
   return (
-    <div>LeftItem</div>
+    <Col>
+        
+    </Col>
   )
 }
 

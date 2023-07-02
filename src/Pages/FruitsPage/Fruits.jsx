@@ -26,7 +26,7 @@ function Fruits() {
     }
   };
 
-  
+
 
   console.log(data)
 
@@ -34,23 +34,33 @@ function Fruits() {
   return (
     <div>
       <Container>
-        <Row className='justify-content-between px-5'>
-          {
-            data.length>0 ? (
-              Object.keys(data[0][0]).map(value=>{
+        <Row >
+          <Col sm={2}>
+            <Row>
+              <h1>sol taraf</h1>
+            </Row>
+          </Col>
+          <Col sm={10}>
+            <Row className='justify-content-between px-5'>
+              {
+                data.length > 0 ? (
+                  Object.keys(data[0][0]).map(value => {
 
-                console.log(value)
-                
-                return <Col sm={5} className='text-center fruitsRow my-4'>
-                  <FruitsCard
-                  productValue={value}
-                  datam={data[0]}
-                  />                    
-                  
-                </Col>
-              })
-            ) : (<h2>LOADİNG</h2>)
-          }
+                    console.log(value)
+
+                    return <Col sm={5} className='text-center fruitsRow my-4'>
+                      <FruitsCard
+                        productValue={value}
+                        datam={data[0]}
+                      />
+
+                    </Col>
+                  })
+                ) : (<h2>LOADİNG</h2>)
+              }
+            </Row>
+          </Col>
+
         </Row>
       </Container>
     </div>
