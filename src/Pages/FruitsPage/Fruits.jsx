@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
 import FruitsCard from '../../Component/FruitsCard';
+import LeftItem from '../../Component/LeftItem';
 
 function Fruits() {
 
@@ -37,7 +38,15 @@ function Fruits() {
         <Row >
           <Col sm={2}>
             <Row>
-              <h1>sol taraf</h1>
+              {
+                Object.keys(data[0][0]).map(value=>{
+                  return <Col>
+                    <LeftItem>
+                      
+                    </LeftItem>
+                  </Col>
+                })
+              }
             </Row>
           </Col>
           <Col sm={10}>
@@ -45,8 +54,6 @@ function Fruits() {
               {
                 data.length > 0 ? (
                   Object.keys(data[0][0]).map(value => {
-
-                    console.log(value)
 
                     return <Col sm={5} className='text-center fruitsRow my-4'>
                       <FruitsCard
