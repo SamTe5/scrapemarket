@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col,Button } from 'react-bootstrap'
 import FruitsCard from '../../Component/FruitsCard';
 import LeftItem from '../../Component/LeftItem';
 
@@ -38,6 +38,9 @@ function Fruits() {
         <Row >
           <Col sm={2}>
             <Row>
+              <Col sm={12} className='text-center'>
+                <Button className='w-100'>ALL</Button>
+              </Col>
               {
                 data.length > 0 ? (
                   Object.keys(data[0][0]).map(value=>{
