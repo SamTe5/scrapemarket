@@ -9,7 +9,7 @@ function LeftItem({ itemName }) {
 
         <ListGroup>
             <ListGroup.Item action href="#link1">
-                {itemName}
+                {itemName.toUpperCase()}
             </ListGroup.Item>
 
         </ListGroup>

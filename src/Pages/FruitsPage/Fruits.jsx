@@ -41,7 +41,7 @@ function Fruits() {
               {
                 data.length > 0 ? (
                   Object.keys(data[0][0]).map(value=>{
-                    return <Col>
+                    return <Col sm={12} className='mt-1'>
                       <LeftItem
                         itemName={value}
                       />                      
@@ -54,12 +54,12 @@ function Fruits() {
             </Row>
           </Col>
           <Col sm={10}>
-            <Row className='justify-content-between px-5'>
+            <Row className='justify-content-center px-5'>
               {
                 data.length > 0 ? (
                   Object.keys(data[0][0]).map(value => {
 
-                    return <Col sm={5} className='text-center fruitsRow my-4'>
+                    return <Col sm={5} className='text-center fruitsRow my-4 mx-4'>
                       <FruitsCard
                         productValue={value}
                         datam={data[0]}
