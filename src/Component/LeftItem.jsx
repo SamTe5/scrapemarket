@@ -15,7 +15,7 @@ function LeftItem({ itemName,onItemClick}) {
 
 
         <ListGroup>
-            <ListGroupItem action onClick={itemFilter}>
+            <ListGroupItem action onClick={itemFilter} variant='light'>
                 {itemName.toUpperCase()}
             </ListGroupItem>
 

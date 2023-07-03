@@ -31,6 +31,10 @@ function Vegetable() {
     setSelectedItem(itemName);
   };
 
+  const all =() =>{
+    setSelectedItem("")
+  }
+
   return (
     <div>
       <Container>
@@ -38,7 +42,7 @@ function Vegetable() {
           <Col sm={2}>
             <Row>
               <Col sm={12} className='text-center'>
-                <Button className='w-100 mt-4'>ALL</Button>
+                <Button className='w-100 mt-4' onClick={all}>ALL</Button>
               </Col>
               {data.length > 0 ? (
                 Object.keys(data[0][1]).map((value, index) => (
@@ -57,7 +61,7 @@ function Vegetable() {
                 Object.keys(data[0][1]).map((value, index) => {
                   if (selectedItem && value === selectedItem) {
                     return (
-                      <Col sm={5} className='text-center fruitsRow my-4 mx-4' key={index}>
+                      <Col sm={5} className='text-center w-75 fruitsRow my-4 mx-4' key={index}>
                         <VegetableCards
                           productValue={value}
                           datam={data[0]}
