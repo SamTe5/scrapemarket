@@ -32,7 +32,7 @@ function Fruits() {
     setSelectedItem(itemName);
   };
 
- console.log(selectedItem)  
+ 
 
 
   return (
@@ -42,7 +42,7 @@ function Fruits() {
           <Col sm={2}>
             <Row>
               <Col sm={12} className='text-center'>
-                <Button className='w-100'>ALL</Button>
+                <Button className='w-100 mt-4'>ALL</Button>
               </Col>
               {
                 data.length > 0 ? (

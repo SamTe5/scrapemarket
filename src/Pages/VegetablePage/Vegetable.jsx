@@ -7,6 +7,7 @@ import LeftItem from '../../Component/LeftItem';
 function Vegetable() {
 
   const [data, setData] = useState([]);
+  const [selectedItem, setSelectedItem] = useState('');
 
   useEffect(() => {
     fetchData();
@@ -28,9 +29,12 @@ function Vegetable() {
     }
   };
 
+  const gelenItem = (itemName) => {
+    setSelectedItem(itemName);
+  };
 
+  console.log(selectedItem)
 
-  console.log(data)
 
 
   return (
@@ -48,6 +52,7 @@ function Vegetable() {
                     return <Col sm={12} className='mt-1'>
                       <LeftItem
                         itemName={value}
+                        onItemClick={gelenItem}
                       />
 
                     </Col>
@@ -58,20 +63,35 @@ function Vegetable() {
             </Row>
           </Col>
           <Col sm={10}>
-            <Row className='justify-content-between px-5'>
+            <Row className='justify-content-center px-5'>
               {
                 data.length > 0 ? (
+
                   Object.keys(data[0][1]).map(value => {
+                  
+                  return(  
+                      value === selectedItem ? (
+                        <Col sm={5} className='text-center fruitsRow my-4 mx-4'>
+                          <VegetableCards
+                            productValue={value}
+                            datam={data[0]}
+                          />
 
-                    console.log(value)
+                        </Col>
+                      ) : (
+                        <Col sm={5} className='text-center fruitsRow my-4 mx-4'>
+                          <VegetableCards
+                            productValue={value}
+                            datam={data[0]}
+                          />
 
-                    return <Col sm={5} className='text-center fruitsRow my-4'>
-                      <VegetableCards
-                        productValue={value}
-                        datam={data[0]}
-                      />
+                        </Col>
+                      )
 
-                    </Col>
+
+                    )
+
+                  
                   })
                 ) : (<h2>LOADİNG</h2>)
               }
