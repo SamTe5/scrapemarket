@@ -43,7 +43,7 @@ function Navbarim() {
               <Link to="/Fruits" style={linkText}>Fruits</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/Vegetable" style={linkText}>Vegetable</Link>
+              <Link to="/Vegetable" style={linkText}>Vegetables</Link>
             </Nav.Link>
           </Nav>
           <Form className="d-flex">

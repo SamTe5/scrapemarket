@@ -32,6 +32,10 @@ function Fruits() {
     setSelectedItem(itemName);
   };
 
+  const all=()=>{
+    setSelectedItem("")
+  }
+
  
 
 
@@ -42,7 +46,7 @@ function Fruits() {
           <Col sm={2}>
             <Row>
               <Col sm={12} className='text-center'>
-                <Button className='w-100 mt-4'>ALL</Button>
+                <Button className='w-100 mt-4' onClick={all}>ALL</Button>
               </Col>
               {
                 data.length > 0 ? (
@@ -62,20 +66,32 @@ function Fruits() {
           </Col>
           <Col sm={10}>
             <Row className='justify-content-center px-5'>
-              {
-                data.length > 0 ? (
-                  Object.keys(data[0][0]).map(value => {
-
-                    return <Col sm={5} className='text-center fruitsRow my-4 mx-4'>
-                      <FruitsCard
-                        productValue={value}
-                        datam={data[0]}
-                      />
-
-                    </Col>
-                  })
-                ) : (<h2>LOADİNG</h2>)
-              }
+            {data.length > 0 ? (
+                Object.keys(data[0][0]).map((value, index) => {
+                  if (selectedItem && value === selectedItem) {
+                    return (
+                      <Col sm={5} className='text-center w-75 fruitsRow my-4 mx-4' key={index}>
+                        <FruitsCard
+                          productValue={value}
+                          datam={data[0]}
+                        />
+                      </Col>
+                    );
+                  } else if (!selectedItem) {
+                    return (
+                      <Col sm={5} className='text-center fruitsRow my-4 mx-4' key={index}>
+                        <FruitsCard
+                          productValue={value}
+                          datam={data[0]}
+                        />
+                      </Col>
+                    );
+                  }
+                  return null;
+                })
+              ) : (
+                <h2>Loading</h2>
+              )}
             </Row>
           </Col>
 
