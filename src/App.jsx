@@ -11,8 +11,7 @@ import Basic from './Pages/BasicPage/Basic';
 function App() {
   return (
     <div className="App vh-100">
-      <Navbarim/>
-       
+      <Navbarim/>      
       
       <Routes>
         <Route path='/Fruits' element={<Fruits/>}/>
