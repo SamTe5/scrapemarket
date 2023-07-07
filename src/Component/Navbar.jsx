@@ -45,6 +45,9 @@ function Navbarim() {
             <Nav.Link>
               <Link to="/Vegetable" style={linkText}>Vegetables</Link>
             </Nav.Link>
+            <Nav.Link>
+              <Link to="/Basic" style={linkText}>Basic Food</Link>
+            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
