@@ -1,12 +1,12 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 
 function Sliders(props) {
     return (
         <Col sm={2}>
             <div className='text-center'>
-                <h2>{props.name}</h2>
+                <h3>{props.name}</h3>
                 <Carousel>
                     <Carousel.Item interval={1000}>
                         <img
