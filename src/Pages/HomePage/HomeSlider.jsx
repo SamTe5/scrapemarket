@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import Sliders from './Sliders';
 
 function HomeSlider() {
-  const [data, setData] = useState([]); 
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -25,16 +25,36 @@ function HomeSlider() {
     }
   };
 
+  const dataAll = []
+  
   const fH = data.length > 0 ? (Object.keys(data[0][0]).map((value, index) => {
-   data[0][0][value].erenler.map(element=>{
-    console.log(element.Price + element.Name)
-   })
-   
+    
+      data[0][0][value].erenler.map(element => {
+        dataAll.push({ Market:"Erenler",Name: element.Name, Price: element.Price })
+      })
+      data[0][0][value].niktas.map(element => {
+        dataAll.push({ Market:"Niktaş",Name: element.Name, Price: element.Price })
+      })
+      data[0][0][value].a101.map(element => {
+        dataAll.push({ Market:"A101",Name: element.Name, Price: element.Price })
+      })
+      data[0][0][value].sok.map(element => {
+        dataAll.push({ Market:"Şok",Name: element.Name, Price: element.Price })
+      })
+      data[0][0][value].migros.map(element => {
+        dataAll.push({ Market:"Migros",Name: element.Name, Price: element.Price })
+      })
+      data[0][0][value].carreforsa.map(element => {
+        dataAll.push({ Market:"Carrefoursa",Name: element.Name, Price: element.Price })
+      })
 
-  })) :(console.log("wait"))
 
-  
-  
+  })) : (console.log("wait"))
+
+  console.log(dataAll)
+
+
+
 
 
   return (
