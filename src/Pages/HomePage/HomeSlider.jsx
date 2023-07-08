@@ -24,10 +24,12 @@ function HomeSlider() {
       console.error('Veri çekme hatası:', error);
     }
   };
+  console.log(data)
+  
 
   const dataAll = []
   
-  const fH = data.length > 0 ? (Object.keys(data[0][0]).map((value, index) => {
+  data.length > 0 ? (Object.keys(data[0][0]).map((value, index) => {
     
       data[0][0][value].erenler.map(element => {
         dataAll.push({ Market:"Erenler",Name: element.Name, Price: element.Price })
@@ -51,8 +53,10 @@ function HomeSlider() {
 
   })) : (console.log("wait"))
 
+  console.log(dataAll)
+
   const numbers = [];
-  let i = 0; // i değişkenini tanımlayın ve başlangıç değerini atayın
+  let i = 0; 
   while (i < 3) {
     const number = Math.floor(Math.random() * dataAll.length);
     numbers.push(number);
@@ -61,7 +65,12 @@ function HomeSlider() {
   
   const lastData=[]
   for(let i=0;i<3;i++){
-    lastData.push([dataAll[i].Market,dataAll[i].Name,dataAll[i].Price])
+    if(dataAll[i].Market.length>0){
+      lastData.push([dataAll[i].Market,dataAll[i].Name,dataAll[i].Price])
+    }else{
+      i=i-1
+    }
+    
   }
 
   console.log(lastData)
@@ -77,8 +86,15 @@ function HomeSlider() {
         <Sliders
           name="Fruits"
           url="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-
-
+          market={lastData[0][0]}
+          market2={lastData[1][0]}
+          market3={lastData[2][0]}
+          food={lastData[0][1]}
+          food2={lastData[1][1]}
+          food3={lastData[2][1]}
+          price={lastData[0][2]}
+          price2={lastData[1][2]}
+          price3={lastData[2][2]}
 
         />
         <Sliders
