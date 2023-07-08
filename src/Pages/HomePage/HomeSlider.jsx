@@ -26,14 +26,11 @@ function HomeSlider() {
   };
 
   const fH = data.length > 0 ? (Object.keys(data[0][0]).map((value, index) => {
-    const numbers=[]
-    let i=0
-    while(i<3){
-      const number=Math.floor(Math.random()*value.length)
-      numbers.push(number)
-      i++
-    }
-    console.log(numbers)
+   data[0][0][value].erenler.map(element=>{
+    console.log(element.Price + element.Name)
+   })
+   
+
   })) :(console.log("wait"))
 
   
