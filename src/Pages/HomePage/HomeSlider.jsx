@@ -51,7 +51,20 @@ function HomeSlider() {
 
   })) : (console.log("wait"))
 
-  console.log(dataAll)
+  const numbers = [];
+  let i = 0; // i değişkenini tanımlayın ve başlangıç değerini atayın
+  while (i < 3) {
+    const number = Math.floor(Math.random() * dataAll.length);
+    numbers.push(number);
+    i++;
+  }
+  
+  const lastData=[]
+  for(let i=0;i<3;i++){
+    lastData.push([dataAll[i].Market,dataAll[i].Name,dataAll[i].Price])
+  }
+
+  console.log(lastData)
 
 
 
