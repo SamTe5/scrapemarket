@@ -3,13 +3,17 @@ import { Row, Col } from 'react-bootstrap';
 import Sliders from './Sliders';
 
 function HomeSlider() {
-  const [data, setData] = useState([]);
+  const [datam, setDatam] = useState([]);
 
   useEffect(() => {
-    fetchData();
+    fetchDatam();
   }, []);
 
-  const fetchData = async () => {
+  useEffect(() => {
+    fetchDatam();
+  }, []);
+
+  const fetchDatam = async () => {
     try {
       const response = await fetch('/api/data', {
         headers: {
@@ -17,36 +21,37 @@ function HomeSlider() {
           'Content-Type': 'application/json',
         },
       });
-      const jsonData = await response.json();
-      const wrappedJsonData = [jsonData];
-      setData(wrappedJsonData);
+      const jsonDatas = await response.json();
+      const wrappedJsonDatas = [jsonDatas];
+      setDatam(wrappedJsonDatas);
     } catch (error) {
       console.error('Veri çekme hatası:', error);
     }
   };
-  console.log(data)
+
+  console.log("datam:",datam)
   
 
   const dataAll = []
   
-  data.length > 0 ? (Object.keys(data[0][0]).map((value, index) => {
+  datam.length > 0 ? (Object.keys(datam[0][0]).map((value, index) => {
     
-      data[0][0][value].erenler.map(element => {
+      datam[0][0][value].erenler.map(element => {
         dataAll.push({ Market:"Erenler",Name: element.Name, Price: element.Price })
       })
-      data[0][0][value].niktas.map(element => {
+      datam[0][0][value].niktas.map(element => {
         dataAll.push({ Market:"Niktaş",Name: element.Name, Price: element.Price })
       })
-      data[0][0][value].a101.map(element => {
+      datam[0][0][value].a101.map(element => {
         dataAll.push({ Market:"A101",Name: element.Name, Price: element.Price })
       })
-      data[0][0][value].sok.map(element => {
+      datam[0][0][value].sok.map(element => {
         dataAll.push({ Market:"Şok",Name: element.Name, Price: element.Price })
       })
-      data[0][0][value].migros.map(element => {
+      datam[0][0][value].migros.map(element => {
         dataAll.push({ Market:"Migros",Name: element.Name, Price: element.Price })
       })
-      data[0][0][value].carreforsa.map(element => {
+      datam[0][0][value].carreforsa.map(element => {
         dataAll.push({ Market:"Carrefoursa",Name: element.Name, Price: element.Price })
       })
 
@@ -54,6 +59,7 @@ function HomeSlider() {
   })) : (console.log("wait"))
 
   console.log(dataAll)
+  console.log("datam:",datam)
 
   const numbers = [];
   let i = 0; 

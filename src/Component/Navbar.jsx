@@ -37,7 +37,7 @@ function Navbarim() {
             navbarScroll
           >
             <Nav.Link className='active' >
-              <Link to="/" style={linkText}>Home</Link>
+              <Link to="/Home" style={linkText}>Home</Link>
             </Nav.Link>
             <Nav.Link>
               <Link to="/Fruits" style={linkText}>Fruits</Link>

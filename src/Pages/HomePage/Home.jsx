@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css'
 import Container from 'react-bootstrap/Container';
 import { Row,Col } from 'react-bootstrap';
-import HomeSlider from './HomeSlider';
+import HomeSlider from '../../Component/HomeSlider';
 
 
 
