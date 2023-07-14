@@ -1,32 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col,Button} from 'react-bootstrap'
 import FruitsCard from '../../Component/FruitsCard';
 import LeftItem from '../../Component/LeftItem';
 
-function Fruits() {
-
-  const [data, setData] = useState([]);
-  const [selectedItem, setSelectedItem] = useState('');
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch('/api/data', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json',
-        },
-      });
-      const jsonData = await response.json();
-      const wrappedJsonData = [jsonData];
-      setData(wrappedJsonData);
-    } catch (error) {
-      console.error('Veri çekme hatası:', error);
-    }
-  };
+function Fruits({data}) {
+  
+  const [selectedItem, setSelectedItem] = useState(''); 
 
   const gelenItem = (itemName) => {
     setSelectedItem(itemName);

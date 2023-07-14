@@ -1,31 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import VegetableCards from '../../Component/VegetableCards';
 import LeftItem from '../../Component/LeftItem';
 
-function Vegetable() {
-  const [data, setData] = useState([]);
+function Vegetable({data}) {
   const [selectedItem, setSelectedItem] = useState('');
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch('/api/data', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json',
-        },
-      });
-      const jsonData = await response.json();
-      const wrappedJsonData = [jsonData];
-      setData(wrappedJsonData);
-    } catch (error) {
-      console.error('Veri çekme hatası:', error);
-    }
-  };
 
   const gelenItem = (itemName) => {
     setSelectedItem(itemName);

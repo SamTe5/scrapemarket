@@ -2,32 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Sliders from './Sliders';
 
-function HomeSlider() {
-  const [datam, setDatam] = useState([]);
-
-  useEffect(() => {
-    fetchDatam();
-  }, []);
-
-  useEffect(() => {
-    fetchDatam();
-  }, []);
-
-  const fetchDatam = async () => {
-    try {
-      const response = await fetch('/api/data', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json',
-        },
-      });
-      const jsonDatas = await response.json();
-      const wrappedJsonDatas = [jsonDatas];
-      setDatam(wrappedJsonDatas);
-    } catch (error) {
-      console.error('Veri çekme hatası:', error);
-    }
-  };
+function HomeSlider({datam}) {
+  
 
   console.log("datam:",datam)
   
