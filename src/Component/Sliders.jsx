@@ -7,7 +7,7 @@ function Sliders(props) {
         <Col sm={2}>
             <div className='text-center'>
                 <h3>{props.name}</h3>
-                <Carousel>
+                <Carousel nextIcon={null} prevIcon={null} indicators={false}>
                     <Carousel.Item interval={1000}>
                         <img
                             className="d-block w-100"
