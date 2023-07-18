@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Basic() {
+function Basic({data}) {
+  console.log(data)
   return (
     <div>Basic</div>
   )

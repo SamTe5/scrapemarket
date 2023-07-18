@@ -40,7 +40,7 @@ function App() {
           <Route path='/Fruits' element={<Fruits data={dataGeneral} />} />
           <Route path='/' element={<Home data={dataGeneral} />} />
           <Route path='/Vegetable' element={<Vegetable data={dataGeneral} />} />
-          <Route path='/Basic' element={<Basic />} />
+          <Route path='/Basic' element={<Basic data={dataGeneral}/>} />
         </Routes>
       );
     }
